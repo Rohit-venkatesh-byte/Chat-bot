@@ -1,0 +1,43 @@
+pairs = [
+    [
+        r"my name is (.*)",
+        ["Hello %1, how are you today?",]
+    ],
+    [
+        r"hi|hey|hello",
+        ["Hello", "Hey there", "Hi there!"]
+    ],
+    [
+        r"what is your name?",
+        ["I am a chatbot created by a programmer. You can call me ChatBot.",]
+    ],
+    [
+        r"how are you?",
+        ["I'm just a program, but I'm here to help you!",]
+    ],
+    [
+        r"sorry (.*)",
+        ["No problem!", "It's okay, no worries!",]
+    ],
+    [
+        r"i'm (.*) (good|well|okay|fine)",
+        ["Glad to hear that!", "That's great to hear!",]
+    ],
+    [
+        r"i'm (.*) (sad|bored|tired)",
+        ["I'm sorry to hear that. How can I help?",]
+    ],
+    [
+        r"quit",
+        ["Bye! Take care.", "Goodbye!"]
+    ],
+    [
+        r"(.*)",
+        ["I'm sorry, I don't understand that.", "Can you please rephrase?", "Let's talk about something else."]
+    ]
+]
+
+def chatbot():
+    print("Hi! I am a chatbot. Type 'quit' to exit.")
+    chat = Chat(pairs, reflections)
+    chat.converse()
